@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: mongo:4.4.6
+          image: mongo:5.0.0
           ports:
             - containerPort: 27017
           env:
@@ -49,7 +49,7 @@ spec:
     spec:
       containers:
       - name: movies
-        image: fabricioveronez/rotten-potatoes:{{tag}}
+        image: fabricioveronez/rotten-potatoes:v1
         ports:
           - containerPort: 5000
         env:
