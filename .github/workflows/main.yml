@@ -50,3 +50,10 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: ${{secrets.K8S_KUBCONFIG}}
+        
+      - name: Deploy Aplicação
+        uses: Azure/k8s-deploy@v3.0
+        with:
+          images: wagneral/rotten-potatoes:v${{github.run_number}}
+          manifests: |
+            k8s/deployment.yaml
