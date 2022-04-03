@@ -37,18 +37,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: movies
+  name: web
 spec:
   selector:
     matchLabels:
-      app: movies
+      app: web
   template:
     metadata:
       labels:
-        app: movies
+        app: web
     spec:
       containers:
-      - name: movies
+      - name: web
         image: fabricioveronez/rotten-potatoes:v1
         ports:
           - containerPort: 5000
